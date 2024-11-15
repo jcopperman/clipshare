@@ -1,3 +1,5 @@
+[![Build](https://github.com/jcopperman/clipshare/actions/workflows/build.yml/badge.svg?branch=main)](https://github.com/jcopperman/clipshare/actions/workflows/build.yml)
+
 # **ClipShare CLI**
 
 ClipShare CLI is a command-line utility for developers to securely share sensitive information, such as environment variables, directly in their terminals. It uses WebSockets for real-time communication and AES-GCM encryption to ensure the secure transmission of secrets.
