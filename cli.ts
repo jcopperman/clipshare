@@ -2,7 +2,7 @@
 
 import { program } from 'commander';
 import WebSocket from 'ws';
-import { encryptSecret, decryptSecret, generateKey } from './script';
+import { encryptSecret, decryptSecret, generateKey } from './src/script';
 
 program
   .name('clipshare')
