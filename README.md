@@ -213,3 +213,9 @@ node server.ts
 ## **License**
 
 This project is licensed under the MIT License. See the LICENSE file for details.
+
+## Support My Work
+
+If you find this tool helpful, please consider supporting me on GitHub Sponsors. Your support helps keep this project alive and maintained!
+
+[![Sponsor](https://img.shields.io/badge/-Sponsor%20Me-ff69b4?style=flat&logo=github-sponsors&logoColor=white)](https://github.com/sponsors/jcopperman)
