@@ -1,7 +1,7 @@
 {
   "name": "clipshare-cli",
-  "version": "1.0.2",
-  "description": "CLI tool for secure secret sharing",
+  "version": "1.0.3",
+  "description": "CLI tool for secure secret sharing with WebSockets",
   "main": "dist/cli.js",
   "bin": {
     "clipshare": "dist/cli.js"
