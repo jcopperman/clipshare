@@ -1,10 +1,12 @@
-// server.ts
-
 import * as WebSocket from 'ws';
 
 const wss = new WebSocket.Server({ port: 8080 });
 
 wss.on('connection', function connection(ws: WebSocket) {
+  // Assign a temporary client ID
+  (ws as any).clientId = `user${Math.floor(Math.random() * 1000)}`;
+  console.log(`Client connected with ID: ${(ws as any).clientId}`);
+
   ws.on('message', function incoming(message: string) {
     console.log('received: %s', message);
 
@@ -14,7 +16,7 @@ wss.on('connection', function connection(ws: WebSocket) {
       const { recipient, payload } = messageObject;
 
       // Find the recipient's WebSocket connection and send the message
-      wss.clients.forEach(function each(client: WebSocket.WebSocket) { 
+      wss.clients.forEach(function each(client: WebSocket.WebSocket) {
         if ((client as any).clientId === recipient && client.readyState === WebSocket.OPEN) {
           client.send(payload);
         }
@@ -24,9 +26,6 @@ wss.on('connection', function connection(ws: WebSocket) {
     }
   });
 
-  // Assign a temporary client ID 
-  (ws as any).clientId = `user${Math.floor(Math.random() * 1000)}`;
-  console.log(`Client connected with ID: ${(ws as any).clientId}`);
 
   // Add an event listener for close events
   ws.onclose = (event) => {

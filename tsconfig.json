@@ -2,8 +2,9 @@
     "compilerOptions": {
       "target": "es2016",
       "module": "commonjs",
-      "outDir": "./dist",
+      "outDir": "./dist", 
       "strict": true,
       "esModuleInterop": true
-    }
+    },
+    "include": ["src/**/*", "cli.ts"]
   }
